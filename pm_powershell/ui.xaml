@@ -1,0 +1,19 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="1005" Height="500" WindowState="Normal" WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
+    <Grid Margin="-2,-8,2,8">
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Process View:" Margin="30,22,0,0" Width="146" Height="32" OpacityMask="#f8f8f8" FontWeight="Bold" FontSize="14"></Label>
+
+        <!-- Process information table -->
+        <ListView HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,60,30,30" Name="processListView" BorderThickness="1" BorderBrush="Black">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Process Name" Width="150" DisplayMemberBinding="{Binding ProcessName}" />
+                    <GridViewColumn Header="ID" Width="150" DisplayMemberBinding="{Binding p_id}" />
+                    <GridViewColumn Header="CPU Usage(s)" Width="150" DisplayMemberBinding="{Binding CPUUsage}" />
+                    <GridViewColumn Header="Mem Usage(MB)" Width="150" DisplayMemberBinding="{Binding MEMUsage}" />
+                    <GridViewColumn Header="I/O Utilization(s)" Width="150" DisplayMemberBinding="{Binding IOUtilization}" />
+                    <GridViewColumn Header="I/O Bound" Width="150" DisplayMemberBinding="{Binding IOBound}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
